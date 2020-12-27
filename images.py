@@ -1,6 +1,6 @@
-from PIL import Image
+from PIL import Image, ImageFilter
 
 img = Image.open('./pokedex/pikachu.jpg')
-
-print(img.size
-)
+filtered_img = img.filter(ImageFilter.BLUR)
+filtered_img.save('Blur.png', 'png')
+print('Done')
